@@ -36,7 +36,7 @@ module Grocer
     end
 
     def encoded_payload
-      JSON.dump(payload_hash)
+      ActiveSupport::JSON.encode(payload_hash)
     end
 
     def payload_hash
